@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rave Party</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Modal de configuração: inserção da URL do vídeo -->
+  <div id="configModal" class="modal">
+    <div class="modal-content">
+      <h2>Configurar Vídeo</h2>
+      <p>Insira a URL do vídeo (Netflix ou outro):</p>
+      <input type="text" id="videoURL" placeholder="Cole a URL do vídeo aqui" />
+      <button id="setVideoBtn">Configurar</button>
+    </div>
+  </div>
+
+  <!-- Header com o título -->
+  <header>
+    <h1>Rave Party</h1>
+  </header>
+
+  <!-- Conteúdo principal dividido em duas áreas -->
+  <main class="main-content">
+    <!-- Área do Player -->
+    <section class="video-area">
+      <div class="video-wrapper">
+        <!-- Caso o conteúdo permitido seja incorporável, o iframe exibirá o player -->
+        <iframe id="videoFrame" src="" frameborder="0" allowfullscreen></iframe>
+      </div>
+      <div class="controls">
+        <button id="playBtn">Play</button>
+        <button id="pauseBtn">Pause</button>
+      </div>
+    </section>
+
+    <!-- Área do Chat -->
+    <aside class="chat-area">
+      <div class="chat-header">
+        <h2>Chat</h2>
+      </div>
+      <div id="chatMessages" class="chat-messages"></div>
+      <div class="chat-input">
+        <input type="text" id="chatInput" placeholder="Digite sua mensagem..." />
+        <button id="sendBtn">Enviar</button>
+      </div>
+    </aside>
+  </main>
+
+  <!-- Área de log para exibir notificações (opcional) -->
+  <div id="log"></div>
+
+  <!-- Biblioteca do Socket.IO -->
+  <script src="/socket.io/socket.io.js"></script>
+  <!-- Script de interação -->
+  <script src="app.js"></script>
+</body>
+</html>

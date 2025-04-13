@@ -1,0 +1,13 @@
+{
+    "name": "netflix-watch-party",
+    "version": "1.0.0",
+    "description": "Watch party para sincronizar a reprodução de vídeos do Netflix",
+    "main": "server/server.js",
+    "scripts": {
+      "start": "node server/server.js"
+    },
+    "dependencies": {
+      "express": "^4.18.2",
+      "socket.io": "^4.5.1"
+    }
+  }
